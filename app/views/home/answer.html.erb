@@ -1,0 +1,36 @@
+<div class="result">
+<h1>
+<%=@time%>회 로또번호 대공개!!<br>
+<%=@answer%> </h1>
+
+<h1>보너스 번호는 <%=@bonus%>입니다!</h1>
+</div>
+
+<div class=compare>
+<h2>내가 뽑은 번호는 <%=@lucky_numbers%>입니다.</h2>
+
+<h2>겹치는 번호는 : <%=@array%> 입니다.</h2>
+
+<% if @answer == @lucky_numbers%>
+<%= "1등입니다!"%>
+
+<% elseif @array.length == 5 && @lucky_numbers.include?(@bonus) %>
+<%= "2등입니다!"%>
+
+<% elseif @array.length == 4 %>
+<%= "3등입니다!"%>
+
+<% elseif @array.length == 3 %>
+<%= "4등입니다!"%>
+
+<% elseif @array.length == 2 %>
+<%= "5등입니다!"%>
+
+<% else %>
+<%= "꽝입니다!"%>
+
+<% end %>
+</div>
+
+
+
