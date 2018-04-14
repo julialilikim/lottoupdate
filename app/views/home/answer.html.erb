@@ -14,16 +14,16 @@
 <% if @answer == @lucky_numbers%>
 <%= "1등입니다!"%>
 
-<% elseif @array.length == 5 && @lucky_numbers.include?(@bonus) %>
+<% elsif @array.length == 5 && @lucky_numbers.include?(@bonus) %>
 <%= "2등입니다!"%>
 
-<% elseif @array.length == 4 %>
+<% elsif @array.length == 4 %>
 <%= "3등입니다!"%>
 
-<% elseif @array.length == 3 %>
+<% elsif @array.length == 3 %>
 <%= "4등입니다!"%>
 
-<% elseif @array.length == 2 %>
+<% elsif @array.length == 2 %>
 <%= "5등입니다!"%>
 
 <% else %>
